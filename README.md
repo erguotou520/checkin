@@ -1,0 +1,2 @@
+## 樱云 自动签到
+设置环境变量`YINGYUN_USERNAME`和`YINGYUN_PASSWORD`

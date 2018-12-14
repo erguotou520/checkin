@@ -1,0 +1,13 @@
+{
+  "name": "yingyun_checkin",
+  "version": "0.0.1",
+  "description": "auto checkin",
+  "main": "index.js",
+  "repository": "git@github.com:erguotou520/yingyun_checkin.git",
+  "author": "erguotou525@gmail.com",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "puppeteer": "^1.11.0"
+  }
+}

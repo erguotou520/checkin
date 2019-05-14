@@ -1,5 +1,6 @@
 language: node_js
 node_js: "node"
 script:
-  - node index.js
+  # - node index.js
+  - node ssru.js
 cache: yarn

@@ -9,7 +9,8 @@ const puppeteer = require('puppeteer');
   await page.type('#passwd', SSRU_PASSWORD, 60);
   await page.click('#login', { delay: 20 });
   await page.waitForNavigation({ timeout: 600000 });
-  await page.click('#result_ok', { delay: 50 })
+  await page.click('#result_ok', { delay: 50 });
+  await page.waitFor(2000);
   await page.click('#checkin', { delay: 22 });
   await page.waitFor(2000);
   await browser.close();

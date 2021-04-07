@@ -2,5 +2,7 @@ language: node_js
 node_js: "node"
 script:
   # - node index.js
-  - node ssru.js
+  # - node ssru.js
+  - node jiji.js
+  - node flowCloud.js
 cache: yarn

@@ -9,10 +9,16 @@ const puppeteer = require('puppeteer');
   await page.type('input[type=password]', COMMON_PASSWORD, { delay: 60 });
   await page.click('.el-form-item button[type=button]', { delay: 20 });
   await page.waitForSelector('div[role=dialog]');
+  await page.waitForTimeout(2000);
   await page.click('div[role=dialog] button.el-button--primary', { delay: 20 });
   await page.waitForNavigation({ timeout: 600000 });
-  await page.waitForSelector('div[role=dialog]');
-  await page.click('div[role=dialog] button.el-dialog__headerbtn', { delay: 20 });
+  await page.waitForFunction(() => {
+    const e = document.querySelector('.footer+.el-dialog__wrapper')
+    if (!e)return false
+    return e.style.display !== 'none'
+  })
+  await page.waitForTimeout(3000);
+  await page.click('.footer+.el-dialog__wrapper .el-dialog__header button.el-dialog__headerbtn', { delay: 20 });
   await page.waitForTimeout(3000);
   await page.click('a.button.purple', { delay: 50 });
   await page.waitForTimeout(4000);
